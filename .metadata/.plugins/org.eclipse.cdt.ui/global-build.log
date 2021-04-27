@@ -1,20 +1,59 @@
-19:59:50 **** Incremental Build of configuration Debug for project STM32_Extruder ****
+20:29:41 **** Incremental Build of configuration Debug for project STM32_Extruder ****
 make -j4 all 
-Building file: ../src/main.c
+Building file: ../src/GPIO.c
+Building file: ../src/I2C.c
+Building file: ../src/adc.c
+Building file: ../src/modbus.c
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
 Invoking: MCU GCC Compiler
 D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/I2C.d" -MT"src/I2C.o" -o "src/I2C.o" "../src/I2C.c"
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/adc.d" -MT"src/adc.o" -o "src/adc.o" "../src/adc.c"
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/modbus.d" -MT"src/modbus.o" -o "src/modbus.o" "../src/modbus.c"
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -o "src/GPIO.o" "../src/GPIO.c"
+Finished building: ../src/I2C.c
+Finished building: ../src/adc.c
+Finished building: ../src/modbus.c
+ 
+ 
+ 
+Finished building: ../src/GPIO.c
+Building file: ../src/pwm.c
+Building file: ../src/system.c
+ 
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -o "src/pwm.o" "../src/pwm.c"
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system.d" -MT"src/system.o" -o "src/system.o" "../src/system.c"
+../src/pwm.c: In function 'TIM3_IRQHandler':
+../src/pwm.c:219:5: warning: implicit declaration of function 'relay_2' [-Wimplicit-function-declaration]
+     relay_2(on);
+     ^~~~~~~
+Finished building: ../src/system.c
+ 
+Finished building: ../src/pwm.c
  
 Building target: STM32_Extruder.elf
 Invoking: MCU GCC Linker
 arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_Extruder.elf" @"objects.list"   -lm
-Finished building target: STM32_Extruder.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "STM32_Extruder.elf" "STM32_Extruder.bin"
-arm-none-eabi-size "STM32_Extruder.elf"
-   text	   data	    bss	    dec	    hex	filename
-   1216	   1080	   1092	   3388	    d3c	STM32_Extruder.elf
- 
+src/adc.o: In function `DMA1_Channel1_IRQHandler':
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:86: undefined reference to `array_mb'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:86: undefined reference to `Isens'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:86: undefined reference to `U_zpt'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:86: undefined reference to `Un'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:86: undefined reference to `Ibreak'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:113: undefined reference to `array_mb'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:113: undefined reference to `Isens'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:113: undefined reference to `U_zpt'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:113: undefined reference to `Un'
+D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug/../src/adc.c:113: undefined reference to `Ibreak'
+collect2.exe: error: ld returned 1 exit status
+makefile:36: recipe for target 'STM32_Extruder.elf' failed
+make: *** [STM32_Extruder.elf] Error 1
