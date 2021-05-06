@@ -38,7 +38,6 @@ int main(void)
     init_modbus();
     init_adc();
 //    Init_I2C1();
-    init_timer3();
 
     relay_2(off);
     relay_1(off);
