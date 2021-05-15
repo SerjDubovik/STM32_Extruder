@@ -43,9 +43,21 @@ int main(void)
     relay_2(off);
     relay_1(off);
 
+    red_led(off);
+    blue_led(off);
+
+
 	for(;;)
 	{
 
+
+
+
+
+	    if(array_mb[2] == 0)										// подтверждение приёма команды. готовность принимать следующую
+	    {
+	    	array_mb[3] = 0;
+	    }
 
 		array_mb[8]++;
 

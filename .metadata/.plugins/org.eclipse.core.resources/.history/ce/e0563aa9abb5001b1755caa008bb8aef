@@ -154,7 +154,7 @@ void init_timer2(void)						// Настройка таймера 2. Общий для отсчётов задержек
 	TIM2->CR1 |= TIM_CR1_DIR;
 
 	TIM2->PSC = 71;							// 72MHz/(PSC+1)	один тик  - 1 мс
-	TIM2->ARR = 1000;						// было 249.
+	TIM2->ARR = 249;
 
 	//TIM2->DIER |= TIM_DIER_TIE;
 	TIM2->DIER |= TIM_DIER_UIE;

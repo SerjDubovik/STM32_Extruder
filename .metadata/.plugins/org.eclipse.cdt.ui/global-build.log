@@ -1,20 +1,10 @@
-19:35:48 **** Incremental Build of configuration Debug for project STM32_Extruder ****
+21:30:45 **** Incremental Build of configuration Debug for project STM32_Extruder ****
 make -j4 all 
-Building file: ../src/main.c
-Building file: ../src/pwm.c
-Invoking: MCU GCC Compiler
+Building file: ../src/modbus.c
 Invoking: MCU GCC Compiler
 D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-D:\GIT\GitHub\STM32_Extruder\STM32_Extruder\Debug
-arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/pwm.d" -MT"src/pwm.o" -o "src/pwm.o" "../src/pwm.c"
-../src/pwm.c: In function 'TIM3_IRQHandler':
-../src/pwm.c:45:5: warning: implicit declaration of function 'relay_2' [-Wimplicit-function-declaration]
-     relay_2(on);
-     ^~~~~~~
-Finished building: ../src/main.c
- 
-Finished building: ../src/pwm.c
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/inc" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/device" -I"D:/GIT/GitHub/STM32_Extruder/STM32_Extruder/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/modbus.d" -MT"src/modbus.o" -o "src/modbus.o" "../src/modbus.c"
+Finished building: ../src/modbus.c
  
 Building target: STM32_Extruder.elf
 Invoking: MCU GCC Linker
@@ -26,5 +16,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "STM32_Extruder.elf" "STM32_Extruder.bin"
 arm-none-eabi-size "STM32_Extruder.elf"
    text	   data	    bss	    dec	    hex	filename
-   6576	   1304	   3748	  11628	   2d6c	STM32_Extruder.elf
+   6868	   1304	   3764	  11936	   2ea0	STM32_Extruder.elf
  
+21:31:18 **** Incremental Build of configuration Debug for project STM32_Extruder ****
+make -j4 all 
+make: Nothing to be done for 'all'.

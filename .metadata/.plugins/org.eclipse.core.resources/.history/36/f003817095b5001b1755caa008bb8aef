@@ -10,8 +10,6 @@ int triger = 0;
 
 
 
-
-
 void init_timer3(void)						// Настройка таймера 3. Общий для отсчётов задержек
 {
 	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;

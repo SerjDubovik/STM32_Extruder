@@ -8,63 +8,11 @@ int triger = 0;
 
 
 
-void init_pwm_3phase(void)
+void init_timer1(void)
 {
-	init_timer3();
-
-    RCC->APB2ENR|= RCC_APB2ENR_TIM1EN;
-
-    TIM1->CCMR1=TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1PE;
-
-    TIM1->CCER=TIM_CCER_CC1E | TIM_CCER_CC1NE;				// разрешение комплиментарного режима
-    TIM1->CCER=TIM_CCER_CC2E | TIM_CCER_CC2NE;
-    TIM1->CCER=TIM_CCER_CC3E | TIM_CCER_CC3NE;
-
-    TIM1->BDTR=TIM_BDTR_MOE | DEADTIME;
-    TIM1->ARR=period;										// период
-    TIM1->CR1=TIM_CR1_ARPE;
-    TIM1->CR1|=TIM_CR1_CEN;
-    TIM1->EGR=TIM_EGR_UG;
-
-    TIM1->CCR1=PWM_1;										// мгновенные значения шима
-    TIM1->CCR2=PWM_2;
-    TIM1->CCR3=PWM_3;
-
-}
-
-void init_pwm_PP_mode(void)
-{
-	init_timer3();
-
-    RCC->APB2ENR|= RCC_APB2ENR_TIM1EN;
-
-    TIM1->CCMR1=TIM_CCMR1_OC1M_2 | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_0 | TIM_CCMR1_OC1PE | TIM_CCMR1_OC2M_2 | TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2PE;
-    TIM1->CCER=TIM_CCER_CC1E | TIM_CCER_CC2E;
-    TIM1->BDTR=TIM_BDTR_MOE;
-
-    TIM1->CCR1=TMR_T - PWM_PP;
-    TIM1->CCR2=PWM_PP;
-
-    TIM1->ARR=TMR_T;
-
-    TIM1->CR1=TIM_CR1_ARPE | TIM_CR1_CMS_1 | TIM_CR1_CMS_0;
-    TIM1->CR1|=TIM_CR1_CEN;
-    TIM1->EGR=TIM_EGR_UG;
-
-}
-
-
-void init_pwm_Compl(void)
-{
-
-	init_timer3();
-
 
 	RCC->APB2ENR|= RCC_APB2ENR_TIM1EN;
-
-
-
-
+/*
     TIM1->CCMR1 =  TIM_CCMR1_OC1M_2 |TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1PE | TIM_CCMR1_OC2M_2 |TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2PE;
     TIM1->CCMR2 =  TIM_CCMR2_OC3M_2 |TIM_CCMR2_OC3M_1 | TIM_CCMR2_OC3PE;
 
@@ -80,15 +28,29 @@ void init_pwm_Compl(void)
     TIM1->EGR =TIM_EGR_UG;						// Регистр генерации событий. генерация перезагрузки
     TIM1->CR1 =TIM_CR1_ARPE | TIM_CR1_CEN;		// разрешить буферизированный режим записи в регистр перезагрузки, разрешить работу счётчика
 
+   */
+
+	TIM1->CR1 |= TIM_CR1_ARPE; 				//shadow
+	TIM1->CR1 |= TIM_CR1_DIR;
+
+	TIM1->PSC = 71;							// 72MHz/(PSC+1)	один тик  - 1 мкс
+	TIM1->ARR = 1000;						// 1000 - 1 мс
+
+	TIM3->DIER |= TIM_DIER_UIE;
+	TIM3->CR1 |= TIM_CR1_CEN;
+
+	NVIC_EnableIRQ (TIM1_IRQn);
 
 }
 
-/*
 void TIM1_CC_IRQHandler (void)
 {
 
 }
-*/
+
+
+
+
 
 
 void init_timer3(void)						// Настройка таймера 3. Общий для отсчётов задержек
@@ -109,7 +71,7 @@ void init_timer3(void)						// Настройка таймера 3. Общий для отсчётов задержек
 }
 
 
-void TIM3_IRQHandler (void)									// обработчик таймера для расчёта частоты частоты синуса
+void TIM3_IRQHandler (void)									// обработчик таймера для ШД
 {
 	unsigned short status;
 	status = TIM3->SR;
@@ -137,7 +99,7 @@ void TIM3_IRQHandler (void)									// обработчик таймера для расчёта частоты ча
 
 
 	}
-} // скобка TIM2_IRQHandler
+} // скобка TIM3_IRQHandler
 
 
 

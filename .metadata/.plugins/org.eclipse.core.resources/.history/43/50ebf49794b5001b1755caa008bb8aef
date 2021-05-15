@@ -38,13 +38,24 @@ int main(void)
     init_modbus();
     init_adc();
 //    Init_I2C1();
+    init_timer3();
 
     relay_2(off);
     relay_1(off);
 
+
+
 	for(;;)
 	{
 
+
+
+
+
+	    if(array_mb[2] == 0)										// подтверждение приёма команды. готовность принимать следующую
+	    {
+	    	array_mb[3] = 0;
+	    }
 
 		array_mb[8]++;
 
